@@ -21,7 +21,7 @@ app.use(morgan("common"));
 app.use("/v1/author", authorRoute);
 
 app.use("/v1/book", bookRoute);
-
-app.listen(process.env.PORT || port, function () {
+let portCurrent = process.env.PORT || port ; 
+app.listen(portCurrent, function () {
   console.log("Listening on port " + port); //Listening on port 8888
 });
